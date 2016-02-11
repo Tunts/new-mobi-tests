@@ -1,0 +1,184 @@
+
+
+  Integration test - New Mobi:
+    -------------------- Add --------------------
+      √ Should successfully add the object. (404ms)
+      √ Should return status code 415 - No headers. (346ms)
+----------
+Chave inválida - Erro 999 - Falha interna ao inserir conteúdo: Chave de autenticação do Parceiro
+      1) Should return fail - Chave inválida.
+      √ Should return fail - Canal inválido. (335ms)
+----------
+Tipo de conteúdo inválida - Erro 999 - Campo Tipo de conteúdo precisa ser um número
+      2) Should return fail - Tipo de conteúdo inválido.
+----------
+Conteúdo inválida - Erro 999 - Falha interna ao inserir conteúdo: Título do conteúdo, Subtítulo do conteúdo, Texto descritivo do conteúdo
+      3) Should return fail - Conteúdo inválido.
+    -------------------- Update --------------------
+      √ Should successfully update the object. (764ms)
+      √ Should return status code 415 - No headers. (733ms)
+----------
+Chave inválida - Erro 999 - Falha interna ao inserir conteúdo: Chave de autenticação do Parceiro
+      4) Should return fail - Chave inválida.
+string(269) "UPDATE `content` SET `channel_id` = '1a2b3c4d', `premium` = 1, `type` = '1', `title` = 'Viva saudável.', `subtitle` = 'Teste Icons', `text` = 'É muito importante para todos.', `partner_fullcontent_link` = 'www.texto.com/todinhinho', `id` = '2915' WHERE `id` =  '2915'"
+
+      5) Should return fail - Canal inválido.
+----------
+Conteúdo inválida - Erro 999 - Falha interna ao inserir conteúdo: Identificador do conteúdo
+      6) Should return fail - Conteúdo ID inválido.
+    -------------------- Delete --------------------
+----------
+Sucesso - Erro 4 - Não foi possivel excluir o conteúdo, verifique se você é  o dono do conteúdo.
+      7) Should successfully delete the object.
+      √ Should return status code 415 - No headers. (713ms)
+----------
+Chave inválida - Erro 999 - Falha interna ao excluir conteúdo, campos obrigatórios: Chave de autenticação do Parceiro
+      8) Should return fail - Chave inválida.
+----------
+Canal inválida - Erro 999 - Campo Channel Id precisa ser um número
+      9) Should return fail - Canal inválido.
+----------
+Conteúdo inválida - Erro 999 - Falha interna ao excluir conteúdo, campos obrigatórios: Identificador de Conteúdo
+      10) Should return fail - Conteúdo ID inválido.
+
+
+  6 passing (9s)
+  10 failing
+
+  1) Integration test - New Mobi: -------------------- Add -------------------- Should return fail - Chave inválida.:
+
+      Uncaught AssertionError: expected 999 to equal 1
+      + expected - actual
+
+      -999
+      +1
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:64:57)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  2) Integration test - New Mobi: -------------------- Add -------------------- Should return fail - Tipo de conteúdo inválido.:
+
+      Uncaught AssertionError: expected 999 to equal 3
+      + expected - actual
+
+      -999
+      +3
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:104:57)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  3) Integration test - New Mobi: -------------------- Add -------------------- Should return fail - Conteúdo inválido.:
+
+      Uncaught AssertionError: expected 999 to equal 4
+      + expected - actual
+
+      -999
+      +4
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:124:57)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  4) Integration test - New Mobi: -------------------- Update -------------------- Should return fail - Chave inválida.:
+
+      Uncaught AssertionError: expected 999 to equal 1
+      + expected - actual
+
+      -999
+      +1
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:223:61)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  5) Integration test - New Mobi: -------------------- Update -------------------- Should return fail - Canal inválido.:
+     Uncaught SyntaxError: Unexpected token s
+      at Object.parse (native)
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:252:41)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  6) Integration test - New Mobi: -------------------- Update -------------------- Should return fail - Conteúdo ID inválido.:
+
+      Uncaught AssertionError: expected 999 to equal 3
+      + expected - actual
+
+      -999
+      +3
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:289:61)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  7) Integration test - New Mobi: -------------------- Delete -------------------- Should successfully delete the object.:
+
+      Uncaught AssertionError: expected 4 to equal 0
+      + expected - actual
+
+      -4
+      +0
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:328:61)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  8) Integration test - New Mobi: -------------------- Delete -------------------- Should return fail - Chave inválida.:
+
+      Uncaught AssertionError: expected 999 to equal 1
+      + expected - actual
+
+      -999
+      +1
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:388:61)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  9) Integration test - New Mobi: -------------------- Delete -------------------- Should return fail - Canal inválido.:
+
+      Uncaught AssertionError: expected 999 to equal 2
+      + expected - actual
+
+      -999
+      +2
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:421:61)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+  10) Integration test - New Mobi: -------------------- Delete -------------------- Should return fail - Conteúdo ID inválido.:
+
+      Uncaught AssertionError: expected 999 to equal 3
+      + expected - actual
+
+      -999
+      +3
+      
+      at Request._callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\test\app.test.js:452:61)
+      at Request.self.callback (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:199:22)
+      at Request.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:1036:10)
+      at IncomingMessage.<anonymous> (C:\Users\CAGRISPAN\Documents\GitHub\new-mobi-bench-test\node_modules\request\request.js:963:12)
+      at endReadableNT (_stream_readable.js:905:12)
+
+
+
