@@ -3,3 +3,4 @@ node_modules/*
 test/url.js
 test/objects.js
 testes-manuais.txt
+config.js
